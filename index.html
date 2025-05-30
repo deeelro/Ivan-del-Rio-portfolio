@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importo font awesome (libreria de fuentes)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio Ivan</title>
+</head>
+
+<body>
+
+    <!--------------- GOOGLE ANALYTICS ----------------->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDY55014TF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XDY55014TF');
+    </script>
+
+    <!--------------- CABECERA ----------------->
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#technologies">Technologies</a>
+            <a href="#portfolio">Proyectos</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!--------------- HOME ----------------->
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, my name is</h3>
+            <h1>Ivan Del Rio</h1>
+            <h3>And I'm a <span class="multiple-text"> </span></h3>
+            <div class="social-media">
+            <a href="https://linkedin.com/in/ivandelriofernandez" target="_blank"><i class="fa-brands fa-linkedin"></i></a>                
+            <a href="https://github.com/deeelro"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <a href="img/CV-IvanDelRio.pdf" class="btn">Show CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="img/imagenPerfil.jpg">
+        </div>
+    </section>
+
+
+    <!--------------- ABOUT ----------------->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/imagenPerfil.jpg">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Descripción personal</h3>
+            <p>Desarrollador Web Junior con formación en el Grado Superior de Desarrollo de Aplicaciones Web y experiencia práctica en proyectos reales con Nodejs y Express👨🏻‍💻. 
+                Me gusta sentirme dueño de los proyectos en los que trabajo y no sólo escribir código, sino también tener una visión crítica del producto, las funcionalidades y el negocio.
+                En mis anteriores empleos he desarrollado competencias clave como la capacidad resolutiva, autonomía en el aprendizaje y habilidad para trabajar en equipo. 
+                JS es mi lenguaje favorito y me mantengo al día con las últimas características.
+            </p>
+        </div>
+    </section>
+
+    <!--------------- technologies ----------------->
+    <!-- https://fontawesome.com/icons -->
+    <section class="technologies" id="technologies">
+    <h2 class="heading">My <span>Technologies</span></h2>
+    <div class="technologies-container">
+        <div class="technologies-box">
+            <h3>Frontend</h3>
+            <div class="tech-icons">
+                <i class="fa-brands fa-html5" title="HTML"></i>
+                <i class="fa-brands fa-css3-alt" title="CSS"></i>
+                <i class="fa-brands fa-js" title="JS"></i>
+            </div>
+        </div>
+
+        <div class="technologies-box">
+            <h3>Backend</h3>
+            <div class="tech-icons">
+                <i class="fa-brands fa-node" title="Node.js"></i>
+                <i class="fa-brands fa-php" title="PHP"></i>
+            </div>
+        </div>
+
+        <div class="technologies-box">
+            <h3>Bases de Datos</h3>
+            <div class="tech-icons">
+                <i class="fa-solid fa-database" title="MySQL"></i>
+                <i class="fa-solid fa-leaf" title="MongoDB"></i>
+            </div>
+        </div>
+
+        <div class="technologies-box">
+            <h3>Otros</h3>
+            <div class="tech-icons">
+                <i class="fa-brands fa-git-alt" title="Git"></i>
+            </div>
+        </div>
+
+        <div class="technologies-box">
+            <h3>Aprendiendo</h3>
+            <div class="tech-icons">
+                <i class="fa-brands fa-aws" title="AWS"></i> 
+                <i class="fa-brands fa-docker" title="Docker"></i>             
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!--------------- PROYECTOS ----------------->
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <a href="https://lks-cars-production.up.railway.app/" target="_blank">
+                    <img src="img/logo-lks-cars.png" alt="">
+                    <div class="portfolio-layer">
+                        <h4>LKS Cars</h4>
+                        <p>Aplicación de gestión de vehículos</p>
+                        <i class="fa-solid fa-share-from-square"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="img/project3.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Proyecto</h4>
+                    <p>EN DESARROLLO</p>
+                    <i class="fa-solid fa-share-from-square"></i>
+                </div>
+            </div>
+
+    </section>
+
+
+    <!--------------- CONTACTO ----------------->
+    <!-- <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="http://localhost:3001/send_email.php" method="post">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name">
+                <input type="text" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="text" name="phone" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Email Subject">
+            </div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button class="btn" type="submit">Send message</button>
+        </form>
+
+    </section> -->
+
+    <!--------------- FOOTER ----------------->
+
+    <footer class="footer">
+        <div class="footer-text"> <!--Texto del footer-->
+            <p>ivandelriotalk@gmail.com | 636264382</p>
+        </div>
+
+        <div class="footer-iconTop"> <!--Icono para subir al inicio de la pagina-->
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+
+    <!--------------- SCROLL REVEAL JS ----------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--------------- SCROLL REVEAL JS ----------------->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!--------------- MAIN JAVASCRIPT ----------------->
+    <script src="main.js"></script>
+
+</body>
+
+</html>

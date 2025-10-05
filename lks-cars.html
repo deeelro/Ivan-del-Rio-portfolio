@@ -4,67 +4,214 @@
     <meta charset="UTF-8">
     <title>LKS Cars - Manual de Usuario</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .manual-wrapper {
+            display: flex;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ÍNDICE FIJO */
+        .manual-index {
+            position: sticky;
+            top: 100px;
+            width: 230px;
+            background: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            height: fit-content;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .manual-index ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .manual-index li {
+            margin-bottom: 1rem;
+        }
+
+        .manual-index a {
+            text-decoration: none;
+            color: #0095f6;
+            font-weight: 500;
+            transition: color 0.3s, font-weight 0.3s;
+        }
+
+        .manual-index a:hover {
+            color: #007acc;
+        }
+
+        .manual-index a.active {
+            color: #007acc;
+            font-weight: 700;
+        }
+
+        /* Contenedor del manual */
+        .manual-container {
+            flex: 1;
+            background: #fff;
+            border-radius: 1.5rem;
+            padding: 3rem;
+            box-shadow: 0 0 1rem rgba(0,0,0,0.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .manual-wrapper {
+                flex-direction: column;
+            }
+
+            .manual-index {
+                position: relative;
+                width: 100%;
+                top: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <header class="header">
-        <a href="index.html" class="logo">Portfolio</a>
+        <a href="index.html" class="logo">← Volver al portfolio</a>
     </header>
-    <section class="portfolio" id="lks-cars">
-        <h2 class="heading">Manual de <span>Usuario</span></h2>
-        <div class="project-description" style="max-width:800px;margin:auto;">
-            <h3>Registro</h3>
-            <p>Accede a la opción “Registrarse”, completa el formulario con nombre, email y contraseña. Recibirás un email de bienvenida.</p>
-            <img src="img-lks/registro1.png" alt="Pantalla de registro" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            <img src="img-lks/registro2.png" alt="Pantalla de registro" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            
-            <h3>Inicio de sesión</h3>
-            <p>Accede a “Iniciar sesión”, introduce tus credenciales y accede a tu cuenta.</p>
-            <img src="img-lks/iniciosesion.png" alt="Pantalla de inicio de sesión" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            
-            <h3>Navegación y búsqueda</h3>
-            <p>Desde la pantalla principal, navega por el catálogo de vehículos.</p>
-            <img src="img-lks/catalogo.png" alt="Catálogo de vehículos" style="width:100%;max-width:400px;margin-bottom:2rem;">
 
-            <h3>Ver detalles</h3>
-            <p>Haz clic en cualquier coche para ver su ficha completa, imágenes y características (se necesita haber iniciado sesión):</p>
-            <img src="img-lks/detalles1.png" alt="Catálogo de vehículos" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            <img src="img-lks/detalles2.png" alt="Catálogo de vehículos" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            
-            <h3>Gestión de favoritos</h3>
-            <p>En la ficha, pulsa el icono de favorito para añadirlo a favoritos.<br>
-            Accede a “Favoritos” en tu menú para ver y gestionar tus vehículos guardados.<br>
-            Desde la lista de favoritos, puedes eliminar cualquier vehículo.</p>
-            <img src="img-lks/favoritos.png" alt="Favoritos" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            
-            <h3>Comprar coche</h3>
-            <p>Pulsa “Comprar”, sigue el proceso de pago.<br>
-            Recibirás confirmación y factura por email.</p>
-            <img src="img-lks/compra.png" alt="Proceso de compra" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            <img src="img-lks/correoCompra.png" alt="Proceso de compra" style="width:100%;max-width:400px;margin-bottom:2rem;">
+    <section class="manual">
+        <div class="manual-wrapper">
+            <!-- ÍNDICE -->
+            <nav class="manual-index">
+                <ul>
+                    <li><a href="#registro">Registro</a></li>
+                    <li><a href="#inicio-sesion">Inicio de sesión</a></li>
+                    <li><a href="#navegacion">Navegación y búsqueda</a></li>
+                    <li><a href="#detalles">Ver detalles</a></li>
+                    <li><a href="#favoritos">Gestión de favoritos</a></li>
+                    <li><a href="#compra">Comprar coche</a></li>
+                    <li><a href="#historial">Historial de compras</a></li>
+                    <li><a href="#perfil">Gestión del perfil</a></li>
+                    <li><a href="#admin">Panel de administración</a></li>
+                    <li><a href="#estadisticas">Estadísticas</a></li>
+                </ul>
+            </nav>
 
-            
-            <h3>Historial de compras</h3>
-            <p>Consulta tu historial de compras y descarga facturas desde “Mis compras”.</p>
-            <img src="img-lks/compra2.png" alt="Historial de compras" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            
-            <h3>Gestión del perfil</h3>
-            <p>Accede a “Mi perfil” para modificar tus datos personales y fotografía.<br>
-            Desde tu perfil, cambia tu contraseña de forma segura.</p>
-            <img src="img-lks/perfil.png" alt="Gestión del perfil" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            
-            <h3>Panel de administración (solo administradores)</h3>
-            <p>Si eres administrador, accede al panel desde el menú.<br>
-            Añade o elimina vehículos del catálogo y consulta las ventas realizadas.</p>
-            <img src="img-lks/panelAdmin.png" alt="Panel de administración" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            
-            <h3>Estadísticas</h3>
-            <p>Visualiza gráficos de ventas, ingresos, favoritos y usuarios activos.</p>
-            <img src="img-lks/estadisticas.png" alt="Estadísticas" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            <img src="img-lks/estadisticas1.png" alt="Estadísticas" style="width:100%;max-width:400px;margin-bottom:2rem;">
-            <img src="img-lks/estadisticas2.png" alt="Estadísticas" style="width:100%;max-width:400px;margin-bottom:2rem;">
+            <!-- CONTENIDO DEL MANUAL -->
+            <div class="manual-container">
+                <h2 class="heading">Manual de <span>Usuario</span></h2>
+                <p> Aplicación web fullstack para gestionar y vender vehículos de ocasión. Los usuarios pueden explorar coches, marcar favoritos, comprar con facturas automáticas y recibir notificaciones por correo. Los administradores gestionan vehículos, usuarios y estadísticas desde un panel completo.
+                    <br> El proyecto usa <strong>Node.js, Express y MongoDB</strong> en el backend, <strong>HTML, CSS, JavaScript y Pug</strong> en el frontend, e integra <strong>Stripe, Axios, Chart.js y PDFKit.</strong> Se aplican buenas prácticas de desarrollo: MVC, seguridad, validación de datos y diseño responsive.
+                </p>
+                <br>
 
-            
+                <article class="manual-section" id="registro">
+                    <h3>Registro</h3>
+                    <p>Implementé un formulario de registro que recoge nombre, email y contraseña.
+                        <br>- Backend: Node.js + Express valida los datos y guarda los usuarios en MongoDB.
+                        <br>- Seguridad: Las contraseñas se almacenan de forma segura con bcrypt.
+                        <br>- Email: Se envía un email de bienvenida usando NodeMailer.</p>
+                    <img src="img-lks/registro1.png" alt="Pantalla de registro">
+                    <img src="img-lks/registro2.png" alt="Pantalla de registro">
+                </article>
+
+                <article class="manual-section" id="inicio-sesion">
+                    <h3>Inicio de sesión</h3>
+                    <p>El sistema de login permite acceder a la plataforma de manera segura:
+                        <br>- JWT: Autenticación mediante tokens para proteger rutas privadas.
+                        <br>- Validación: Node.js + Express comprueba credenciales y devuelve errores claros.
+                        <br>- Frontend: Vue.js gestiona el estado de sesión y redirección dinámica.</p>
+                    <img src="img-lks/iniciosesion.png" alt="Pantalla de inicio de sesión">
+                </article>
+
+                <article class="manual-section" id="navegacion">
+                    <h3>Navegación y búsqueda</h3>
+                    <p>Desde la pantalla principal, navega por el catálogo de vehículos.
+                        <br>Backend optimizado para paginar resultados.</p>
+                    <img src="img-lks/catalogo.png" alt="Catálogo de vehículos">
+                </article>
+
+                <article class="manual-section" id="detalles">
+                    <h3>Ver detalles</h3>
+                    <p>Haz clic en cualquier coche para ver su ficha completa, imágenes y características.</p>
+                    <img src="img-lks/detalles1.png" alt="Ficha de coche">
+                    <img src="img-lks/detalles2.png" alt="Ficha de coche">
+                </article>
+
+                <article class="manual-section" id="favoritos">
+                    <h3>Gestión de favoritos</h3>
+                    <p>MongoDB: Relación de usuario ↔ favoritos, con capacidad de agregar y eliminar.
+                        <br>Frontend: Componente interactivo que permite marcar y desmarcar favoritos al instante.</p>
+                    <img src="img-lks/favoritos.png" alt="Favoritos">
+                </article>
+
+                <article class="manual-section" id="compra">
+                    <h3>Comprar coche</h3>
+                    <p>Pasarela de pago con Stripe para transacciones seguras. 
+                        <br>Backend: Node.js + Express registra la transacción y actualiza la base de datos.
+                        <br>Email: Confirmación automática y envío de factura PDF mediante NodeMailer.</p>
+                    <img src="img-lks/compra.png" alt="Proceso de compra">
+                    <img src="img-lks/correoCompra.png" alt="Correo de confirmación de compra">
+                </article>
+
+                <article class="manual-section" id="historial">
+                    <h3>Historial de compras</h3>
+                    <p>Consulta tu historial de compras y descarga facturas desde “Mis compras”.</p>
+                    <img src="img-lks/compra2.png" alt="Historial de compras">
+                </article>
+
+                <article class="manual-section" id="perfil">
+                    <h3>Gestión del perfil</h3>
+                    <p>Accede a “Mi perfil” para modificar tus datos personales y fotografía.<br>
+                    Desde tu perfil, cambia tu contraseña de forma segura.</p>
+                    <img src="img-lks/perfil.png" alt="Gestión del perfil">
+                </article>
+
+                <article class="manual-section" id="admin">
+                    <h3>Panel de administración (solo administradores)</h3>
+                    <p>Si eres administrador, accede al panel desde el menú.<br>
+                    Añade o elimina vehículos del catálogo y consulta las ventas realizadas.</p>
+                    <img src="img-lks/panelAdmin.png" alt="Panel de administración">
+                </article>
+
+                <article class="manual-section" id="estadisticas">
+                    <h3>Estadísticas</h3>
+                    <p>Visualiza gráficos de ventas, ingresos, favoritos y usuarios activos.</p>
+                    <img src="img-lks/estadisticas.png" alt="Estadísticas">
+                    <img src="img-lks/estadisticas1.png" alt="Gráficos de estadísticas">
+                    <img src="img-lks/estadisticas2.png" alt="Panel de datos">
+                </article>
+            </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <p>© 2025 Iván del Río — <a href="mailto:ivandelriotalk@gmail.com">ivandelriotalk@gmail.com</a></p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('.manual-section');
+        const links = document.querySelectorAll('.manual-index a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 200;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
